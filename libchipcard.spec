@@ -33,8 +33,10 @@ Libchipcard allows easy access to smart cards. It provides basic access
 to memory and processor cards and has special support for German medical
 cards, German "Geldkarten" and HBCI (homebanking) cards (both type 0 and 
 type 1).
+
 It accesses the readers via CTAPI or PC/SC interfaces and has successfully
 been tested with Towitoko, Kobil and Reiner-SCT readers.
+
 This package contains the chipcard3-daemon needed to access card readers.
 
 %package -n %libname
@@ -47,8 +49,10 @@ Libchipcard allows easy access to smart cards. It provides basic access
 to memory and processor cards and has special support for German medical
 cards, German "Geldkarten" and HBCI (homebanking) cards (both type 0 and 
 type 1).
+
 It accesses the readers via CTAPI or PC/SC interfaces and has successfully
 been tested with Towitoko, Kobil and Reiner-SCT readers.
+
 This package contains the chipcard3-daemon needed to access card readers.
 
 
@@ -75,8 +79,10 @@ Libchipcard allows easy access to smart cards. It provides basic access
 to memory and processor cards and has special support for German medical
 cards, German "Geldkarten" and HBCI (homebanking) cards (both type 0 and 
 type 1).
+
 It accesses the readers via CTAPI or PC/SC interfaces and has successfully
 been tested with Towitoko, Kobil and Reiner-SCT readers.
+
 This package contains the chipcard3-daemon needed to access card readers.
 
 
