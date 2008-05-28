@@ -1,5 +1,5 @@
 %define name libchipcard
-%define version 4.0.0
+%define version 4.1.0
 %define fversion %{version}
 %define release %mkrel 1
 %define major 0
@@ -134,7 +134,7 @@ chmod 644 %buildroot%_libdir/*.la %buildroot%_libdir/gwenhywfar/plugins/*/*/*.la
 %dir %{_sysconfdir}/chipcard/server/
 %config(noreplace) %{_sysconfdir}/chipcard/client/chipcardc.conf*
 %config(noreplace) %{_sysconfdir}/chipcard/server/chipcardd.conf*
-%attr(755,root,root) %{_sysconfdir}/init.d/chipcardd
+#%attr(755,root,root) %{_sysconfdir}/init.d/chipcardd
 %{_bindir}/cardcommander
 %{_bindir}/chipcard-tool
 %{_bindir}/geldkarte
