@@ -148,7 +148,7 @@ chmod 644 %buildroot%_libdir/*.la %buildroot%_libdir/gwenhywfar/plugins/*/*/*.la
 %dir %{_sysconfdir}/chipcard/server/
 %config(noreplace) %{_sysconfdir}/chipcard/client/chipcardc.conf*
 %config(noreplace) %{_sysconfdir}/chipcard/server/chipcardd.conf*
-#%attr(755,root,root) %{_sysconfdir}/init.d/chipcardd
+%attr(755,root,root) %{_sysconfdir}/init.d/chipcardd
 %{_bindir}/cardcommander
 %{_bindir}/chipcard-tool
 %{_bindir}/geldkarte
@@ -157,5 +157,3 @@ chmod 644 %buildroot%_libdir/*.la %buildroot%_libdir/gwenhywfar/plugins/*/*/*.la
 %{_sbindir}/chipcardd4
 %_datadir/chipcard/
 %_libdir/chipcard
-
-
