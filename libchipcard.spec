@@ -1,5 +1,5 @@
 %define name libchipcard
-%define version 4.1.1
+%define version 4.1.2
 %define fversion %{version}
 %define release %mkrel 1
 %define major 0
@@ -17,7 +17,7 @@ Source: http://prdownloads.sourceforge.net/libchipcard/%{name}-%{fversion}.tar.g
 Patch0: libchipcard-4.0.0-fixinitscript.patch
 
 Group: System/Libraries
-License: GPL
+License: LGPLv2
 URL: http://www.libchipcard.de
 BuildRoot: %{_tmppath}/%{name}-%{version}-root
 BuildRequires: libgwenhywfar-devel >= 3.0.0
