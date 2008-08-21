@@ -18,7 +18,7 @@ Patch0: libchipcard-4.0.0-fixinitscript.patch
 
 Group: System/Libraries
 License: LGPLv2
-URL: http://www.libchipcard.de
+URL: http://www.aquamaniac.de/sites/libchipcard/index.php
 BuildRoot: %{_tmppath}/%{name}-%{version}-root
 BuildRequires: libgwenhywfar-devel >= 3.0.0
 BuildRequires: libpcsclite-devel
