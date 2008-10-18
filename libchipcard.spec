@@ -1,5 +1,5 @@
 %define name libchipcard
-%define version 4.2.0
+%define version 4.2.1
 %define fversion %{version}
 %define release %mkrel 1
 %define major 0
@@ -12,7 +12,8 @@ Summary: A library for easy access to smart cards (chipcards)
 Name: %{name}
 Version: %{version}
 Release: %{release}
-Source: http://www.aquamaniac.de/sites/download/download.php?package=02&release=07&file=01&dummy=%{name}-%{fversion}.tar.gz
+#http://www.aquamaniac.de/sites/download/download.php?package=02&release=07&file=01&dummy=
+Source: %{name}-%{fversion}.tar.gz
 # (fc)  3.0.2-3mdv fix initscript
 Patch0: libchipcard-4.0.0-fixinitscript.patch
 
