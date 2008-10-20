@@ -23,7 +23,7 @@ URL: http://www.aquamaniac.de/sites/libchipcard/index.php
 BuildRoot: %{_tmppath}/%{name}-%{version}-root
 BuildRequires: libgwenhywfar-devel >= 3.0.0
 BuildRequires: libpcsclite-devel
-BuildRequires: libusb-devel
+BuildRequires: hal-devel
 BuildRequires: libsysfs-devel
 Requires(post): rpm-helper
 Requires(preun): rpm-helper
