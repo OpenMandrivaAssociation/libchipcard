@@ -1,7 +1,7 @@
 %define name libchipcard
 %define version 4.2.3
 %define fversion %{version}
-%define release %mkrel 1
+%define release %mkrel 2
 %define major 0
 %define libname %mklibname chipcard %major
 %define libnamedev %mklibname -d chipcard
