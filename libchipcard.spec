@@ -12,8 +12,7 @@ Summary: A library for easy access to smart cards (chipcards)
 Name: %{name}
 Version: %{version}
 Release: %{release}
-#http://www.aquamaniac.de/sites/download/download.php?package=02&release=07&file=01&dummy=
-Source: %{name}-%{fversion}.tar.gz
+Source: http://files.hboeck.de/aq/%{name}-%{fversion}.tar.gz
 # (fc)  3.0.2-3mdv fix initscript
 Patch0: libchipcard-4.0.0-fixinitscript.patch
 
