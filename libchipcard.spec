@@ -1,5 +1,5 @@
 %define name libchipcard
-%define version 4.2.4
+%define version 4.2.7
 %define fversion %{version}
 %define release %mkrel 1
 %define major 0
@@ -124,7 +124,6 @@ chmod 644 %buildroot%_libdir/*.la %buildroot%_libdir/gwenhywfar/plugins/*/*/*.la
 %files -n %libname
 %defattr(-,root,root,0755)
 %{_libdir}/libchipcard_ctapi.so.%{major}*
-%{_libdir}/libchipcardd.so.%{major}*
 
 %files -n %clientlibname
 %defattr(-,root,root,0755)
