@@ -3,7 +3,7 @@
 %define fversion %{version}
 %define release %mkrel 1
 %define libnamedev %mklibname -d chipcard
-%define clientmajor 5
+%define clientmajor 6
 %define clientlibname %mklibname chipcard %clientmajor
 
 Summary: A library for easy access to smart cards (chipcards)
