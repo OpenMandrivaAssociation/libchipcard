@@ -1,6 +1,6 @@
 %define name libchipcard
-%define version 4.99.9
-%define fversion %{version}rc
+%define version 5.0.0
+%define fversion %{version}
 %define release %mkrel 1
 %define libnamedev %mklibname -d chipcard
 %define clientmajor 5
@@ -16,7 +16,7 @@ Group: System/Libraries
 License: LGPLv2
 URL: http://www.aquamaniac.de/sites/libchipcard/index.php
 BuildRoot: %{_tmppath}/%{name}-%{version}-root
-BuildRequires: libgwenhywfar-devel >= 3.99.0.0
+BuildRequires: libgwenhywfar-devel >= 4.0.0
 BuildRequires: libpcsclite-devel
 Requires(post): rpm-helper
 Requires(preun): rpm-helper
