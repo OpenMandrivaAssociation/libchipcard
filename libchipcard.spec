@@ -1,7 +1,7 @@
 %define name libchipcard
 %define version 5.0.0
 %define fversion %{version}
-%define release %mkrel 1
+%define release %mkrel 2
 %define libnamedev %mklibname -d chipcard
 %define clientmajor 6
 %define clientlibname %mklibname chipcard %clientmajor
