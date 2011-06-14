@@ -1,7 +1,7 @@
 %define name libchipcard
-%define version 5.0.0
+%define version 5.0.2
 %define fversion %{version}
-%define release %mkrel 3
+%define release %mkrel 1
 %define libnamedev %mklibname -d chipcard
 %define clientmajor 6
 %define clientlibname %mklibname chipcard %clientmajor
@@ -11,7 +11,6 @@ Name: %{name}
 Version: %{version}
 Release: %{release}
 Source: http://files.hboeck.de/aq/%{name}-%{fversion}.tar.gz
-Patch0: libchipcard-4.99.9-pcsclite-1.6.patch
 Group: System/Libraries
 License: LGPLv2
 URL: http://www.aquamaniac.de/sites/libchipcard/index.php
@@ -64,7 +63,6 @@ This package contains the chipcard3-daemon needed to access card readers.
 
 %prep
 %setup -q -n %name-%fversion
-%patch0 -p0
 
 %build
 %configure2_5x --disable-static --with-pcsc-libs=%{_libdir}
