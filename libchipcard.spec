@@ -1,10 +1,10 @@
 %define name libchipcard
 %define version 5.0.2
 %define fversion %{version}
-%define release %mkrel 1
+%define release %mkrel 2
 %define libnamedev %mklibname -d chipcard
 %define clientmajor 6
-%define clientlibname %mklibname chipcard %clientmajor
+%define clientlibname %mklibname chipcard %{clientmajor}
 
 Summary: A library for easy access to smart cards (chipcards)
 Name: %{name}
@@ -32,24 +32,24 @@ been tested with Towitoko, Kobil and Reiner-SCT readers.
 
 This package contains the chipcard3-daemon needed to access card readers.
 
-%package -n %libnamedev
+%package -n %{libnamedev}
 Summary: LibChipCard server development kit
 Group: Development/C
-Requires: %clientlibname = %version
-Provides: %name-devel = %version-%release
+Requires: %{clientlibname} = %{version}
+Provides: %{name}-devel = %{version}-%{release}
 Obsoletes: %mklibname -d chipcard 3 0
 Obsoletes: %mklibname -d chipcard 3
 
-%description  -n %libnamedev
+%description  -n %{libnamedev}
 This package contains chipcard3-server-config and header files for writing 
 drivers, services or even your own chipcard daemon for LibChipCard.
 
-%package -n %clientlibname
+%package -n %{clientlibname}
 Group: System/Libraries
 Summary: A library for easy access to smart cards (chipcards)
-Requires: %name >= %version
+Requires: %{name} >= %{version}
 
-%description -n %clientlibname
+%description -n %{clientlibname}
 Libchipcard allows easy access to smart cards. It provides basic access
 to memory and processor cards and has special support for German medical
 cards, German "Geldkarten" and HBCI (homebanking) cards (both type 0 and 
@@ -62,32 +62,32 @@ This package contains the chipcard3-daemon needed to access card readers.
 
 
 %prep
-%setup -q -n %name-%fversion
+%setup -q -n %{name}-%{fversion}
 
 %build
 %configure2_5x --disable-static --with-pcsc-libs=%{_libdir}
 %make
 
 %install
-[ "$RPM_BUILD_ROOT" != "/" ] && rm -rf $RPM_BUILD_ROOT
+[ "%{buildroot}" != "/" ] && rm -rf %{buildroot}
 %makeinstall_std
 
-find %buildroot%_libdir -name *.la|xargs rm 
+find %{buildroot}%{_libdir} -name *.la|xargs rm
 
 %clean
-[ "$RPM_BUILD_ROOT" != "/" ] && rm -rf $RPM_BUILD_ROOT
+[ "%{buildroot}" != "/" ] && rm -rf %{buildroot}
 
 %if %mdkversion < 200900
-%post -n %libname -p /sbin/ldconfig
+%post -n %{libname} -p /sbin/ldconfig
 %endif
 %if %mdkversion < 200900
-%postun -n %libname -p /sbin/ldconfig
+%postun -n %{libname} -p /sbin/ldconfig
 %endif
 %if %mdkversion < 200900
-%post -n %clientlibname -p /sbin/ldconfig
+%post -n %{clientlibname} -p /sbin/ldconfig
 %endif
 %if %mdkversion < 200900
-%postun -n %clientlibname -p /sbin/ldconfig
+%postun -n %{clientlibname} -p /sbin/ldconfig
 %endif
 
 %post
@@ -95,11 +95,11 @@ find %buildroot%_libdir -name *.la|xargs rm
 %preun
 %_preun_service chipcardd
 
-%files -n %clientlibname
+%files -n %{clientlibname}
 %defattr(-,root,root)
 %{_libdir}/libchipcard.so.%{clientmajor}*
 
-%files -n %libnamedev
+%files -n %{libnamedev}
 %defattr(-,root,root)
 %doc README COPYING ChangeLog
 %{_libdir}/*.so
