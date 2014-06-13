@@ -5,7 +5,7 @@
 Summary:	A library for easy access to smart cards (chipcards)
 Name:		libchipcard
 Version:	5.0.2
-Release:	7
+Release:	8
 Group:		System/Libraries
 License:	LGPLv2
 Url:		http://www.aquamaniac.de/sites/libchipcard/index.php
