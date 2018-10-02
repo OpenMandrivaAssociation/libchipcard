@@ -10,6 +10,7 @@ Group:		System/Libraries
 License:	LGPLv2
 Url:		http://www.aquamaniac.de/sites/libchipcard/index.php
 Source0:	http://files.hboeck.de/aq/%{name}-%{version}.tar.gz
+Patch1:		libchipcard-5.0.4-cpp11.patch
 BuildRequires:	pkgconfig(gwenhywfar)
 BuildRequires:	pkgconfig(libpcsclite)
 BuildRequires:	pkgconfig(zlib)
@@ -45,6 +46,7 @@ drivers, services or even your own chipcard daemon for LibChipCard.
 
 %prep
 %setup -q
+%apply_patches
 
 %build
 %configure2_5x \
