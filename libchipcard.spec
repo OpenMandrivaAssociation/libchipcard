@@ -12,6 +12,7 @@ Url:		http://www.aquamaniac.de/sites/libchipcard/index.php
 Source0:	http://files.hboeck.de/aq/%{name}-%{version}.tar.gz
 BuildRequires:	pkgconfig(gwenhywfar)
 BuildRequires:	pkgconfig(libpcsclite)
+BuildRequires:	pkgconfig(zlib)
 
 %description
 Libchipcard allows easy access to smart cards. It provides basic access
