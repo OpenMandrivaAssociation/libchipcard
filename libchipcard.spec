@@ -46,7 +46,7 @@ drivers, services or even your own chipcard daemon for LibChipCard.
 
 %prep
 %setup -q
-%apply_patches
+%autopatch -p1
 
 %build
 %configure2_5x \
