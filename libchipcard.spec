@@ -4,12 +4,12 @@
 
 Summary:	A library for easy access to smart cards (chipcards)
 Name:		libchipcard
-Version:	5.1.5rc2
+Version:	5.1.6
 Release:	1
 Group:		System/Libraries
 License:	LGPLv2
 Url:		http://www.aquamaniac.de/sites/libchipcard/index.php
-Source0:	https://www.aquamaniac.de/rdm/attachments/download/229/libchipcard-%{version}.tar.gz
+Source0:	https://www.aquamaniac.de/rdm/attachments/download/382/libchipcard-%{version}.tar.gz
 Patch1:		libchipcard-5.0.4-cpp11.patch
 BuildRequires:	pkgconfig(gwenhywfar) >= 5.1.0
 BuildRequires:	pkgconfig(libpcsclite)
@@ -49,13 +49,13 @@ drivers, services or even your own chipcard daemon for LibChipCard.
 %autopatch -p1
 
 %build
-%configure2_5x \
+%configure \
 	--disable-static \
 	--with-pcsc-libs=%{_libdir}
-%make
+%make_build
 
 %install
-%makeinstall_std
+%make_install
 
 %files
 %doc README COPYING ChangeLog
