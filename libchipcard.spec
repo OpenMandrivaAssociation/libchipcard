@@ -8,7 +8,7 @@ Version:	5.1.6
 Release:	2
 Group:		System/Libraries
 License:	LGPLv2
-Url:		http://www.aquamaniac.de/sites/libchipcard/index.php
+Url:		https://www.aquamaniac.de/sites/libchipcard/index.php
 Source0:	https://www.aquamaniac.de/rdm/attachments/download/382/libchipcard-%{version}.tar.gz
 Patch1:		libchipcard-5.0.4-cpp11.patch
 BuildRequires:	pkgconfig(gwenhywfar) >= 5.1.0
