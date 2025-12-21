@@ -11,6 +11,11 @@ License:	LGPLv2
 Url:		https://www.aquamaniac.de/sites/libchipcard/index.php
 Source0:	https://www.aquamaniac.de/rdm/attachments/download/382/libchipcard-%{version}.tar.gz
 Patch1:		libchipcard-5.0.4-cpp11.patch
+BuildRequires:	autoconf
+BuildRequires:	automake
+BuildRequires:	libtool-base
+BuildRequires:	slibtool
+BuildRequires:	make
 BuildRequires:	pkgconfig(gwenhywfar) >= 5.1.0
 BuildRequires:	pkgconfig(libpcsclite)
 BuildRequires:	pkgconfig(zlib)
